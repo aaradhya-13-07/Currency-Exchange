@@ -38,32 +38,7 @@ flowchart TD
 ```
 
 ---
-
-## 3. Component Architecture
-
-```mermaid
-flowchart TB
-    MAIN[main()]
-
-    MAIN --> CURRENCY[get_currency_code()]
-    MAIN --> NUMBER[get_positive_number()]
-
-    MAIN --> CONVERSION[Currency Conversion]
-    MAIN --> INFLATION[Inflation Projection]
-
-    CURRENCY --> ER[EXCHANGE_RATES]
-    CONVERSION --> ER
-
-    INFLATION --> IR[INFLATION_RATES]
-    MAIN --> CN[CURRENCY_NAMES]
-
-    CONVERSION --> RESULT[Conversion Result]
-    INFLATION --> RESULT
-```
-
----
-
-## 4. Module Design
+## 3. Module Design
 
 ### Module 1 — Exchange Rate Data
 
